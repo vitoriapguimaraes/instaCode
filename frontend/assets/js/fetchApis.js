@@ -1,5 +1,5 @@
 // Configure sua URL de produção aqui
-const PROD_URL = "https://seu-backend-aqui.onrender.com";
+const PROD_URL = "https://insta-code-three.vercel.app/";
 
 const API_URL = window.location.hostname.includes("localhost")
   ? "http://localhost:3000/posts"
