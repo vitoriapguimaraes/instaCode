@@ -8,16 +8,24 @@ modal.style.display = "none";
 
 const imageGrid = document.querySelector(".image-grid");
 
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+let currentIndex = 0;
+let imagesData = [];
+
 // Função para buscar e exibir os dados do endpoint
 async function displayImages() {
   const data = await fetchImages();
+  imagesData = data; // Armazena os dados para navegação
   try {
     const postsList = data
-      .map((item) => {
+      .map((item, index) => {
+        // Added index to map
         const description = item.description || item.descricao;
         const imgUrl = item.imgUrl || item.img_url;
         return `
-            <article data-description="${description}">
+            <article data-index="${index}" data-description="${description}">
               <figure>
                 <img src="${imgUrl}" alt="${item.alt}" />
               </figure>
@@ -34,23 +42,43 @@ async function displayImages() {
   }
 }
 
+function updateModal(index) {
+  const item = imagesData[index];
+  if (!item) return;
+
+  const description = item.description || item.descricao;
+  const imgUrl = item.imgUrl || item.img_url;
+
+  modalImg.src = imgUrl;
+  modalImg.alt = item.alt;
+  captionText.innerHTML = `<p>${description || item.alt}</p>`;
+  currentIndex = index;
+}
+
 // Função para adicionar os eventos de clique às imagens
 function addImageClickEvents() {
-  const images = document.querySelectorAll(".image-grid img");
-  images.forEach((img) => {
-    img.addEventListener("click", function () {
-      captionText.textContent = "";
-      modal.style.display = "block";
-      modalImg.src = this.src;
-
-      const article = this.closest("article");
-      const description = article ? article.dataset.description : "";
-      const caption = description || this.alt;
-
-      captionText.innerHTML = `<p>${caption}</p>`;
+  const articles = document.querySelectorAll(".image-grid article");
+  articles.forEach((article) => {
+    article.addEventListener("click", function () {
+      const index = parseInt(this.dataset.index);
+      modal.style.display = "flex";
+      updateModal(index);
     });
   });
 }
+
+// Eventos de navegação
+prevBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // Evita fechar o modal ao clicar no botão
+  currentIndex = currentIndex > 0 ? currentIndex - 1 : imagesData.length - 1;
+  updateModal(currentIndex);
+});
+
+nextBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // Evita fechar o modal ao clicar no botão
+  currentIndex = currentIndex < imagesData.length - 1 ? currentIndex + 1 : 0;
+  updateModal(currentIndex);
+});
 
 // Evento de fechar o modal
 closeBtn.addEventListener("click", function () {
