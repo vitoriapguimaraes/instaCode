@@ -23,7 +23,7 @@
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/vitoriapguimaraes/Nodejs-Instabytes.git
+   git clone https://github.com/vitoriapguimaraes/instaCode.git
    ```
 
 2. Configure o Backend:
@@ -76,10 +76,10 @@
 
 ## Status
 
-- ✅ Concluído
-- 🛠️ Em manutenção (Adicionando novos projetos continuamente)
+✅ Concluído
+🛠️ Em manutenção (Adicionando novos projetos continuamente)
 
-> Veja as [issues abertas](https://github.com/vitoriapguimaraes/Nodejs-Instabytes/issues) para sugestões de melhorias.
+> Veja as [issues abertas](https://github.com/vitoriapguimaraes/instaCode/issues) para sugestões de melhorias.
 
 ## Mais Sobre Mim
 
