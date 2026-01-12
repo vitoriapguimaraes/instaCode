@@ -31,7 +31,7 @@ export async function getAllPosts() {
     return mockPosts;
   }
   // Seleciona o banco de dados "imersao-instabytes"
-  const db = connection.db("imersao-instabytes");
+  const db = connection.db("imersao-istabytes");
   // Seleciona a coleção "posts" dentro do banco de dados
   const collection = db.collection("posts");
   // Retorna um array com todos os documentos da coleção
@@ -44,7 +44,7 @@ export async function createPost(newPost) {
     mockPosts.push(mockPost);
     return { insertedId: mockPost._id };
   }
-  const db = connection.db("imersao-instabytes");
+  const db = connection.db("imersao-istabytes");
   const collection = db.collection("posts");
   return collection.insertOne(newPost);
 }
@@ -58,7 +58,7 @@ export async function updatePost(id, newPost) {
     }
     return { modifiedCount: 0 };
   }
-  const db = connection.db("imersao-instabytes");
+  const db = connection.db("imersao-istabytes");
   const collection = db.collection("posts");
   const objID = ObjectId.createFromHexString(id);
   return collection.updateOne({ _id: new ObjectId(objID) }, { $set: newPost });
