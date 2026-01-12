@@ -1,92 +1,88 @@
-# Instabytes
-O Instabytes é um projeto desenvolvido com o objetivo de criar uma aplicação para gerenciamento de posts. O backend foi implementado durante a Imersão Backend da Alura, com funcionalidades como upload de imagens e geração automática de descrições para acessibilidade. Já o frontend, fornecido pela equipe da Alura, oferece uma interface moderna e funcional.
-Ambas as pastas (backend e frontend) contêm descrições detalhadas de cada parte do projeto. A descrição do backend inclui as funcionalidades e o aprendizado obtido durante o desenvolvimento, enquanto a do frontend explica a estrutura e os recursos do código original disponibilizado pela Alura.
+# Vitoria.Code | Portfolio Full Stack
 
-## Demonstração/Visualização
-Abaixo está uma visualização da interface da aplicação:
+> Meu portfólio profissional interativo, desenvolvido para demonstrar minhas habilidades em desenvolvimento Full Stack. O projeto exibe meus principais trabalhos em uma interface moderna e responsiva, utilizando um backend robusto para gerenciamento de conteúdo e integração com IA.
 
-![Tela do sistema](https://github.com/vitoriapguimaraes/portfolio-web-Java/blob/master/Node-Instabytes/display-Instabytes.png)
+[Link de acesso ao deploy em breve]
+
+![Demonstração do sistema](https://github.com/vitoriapguimaraes/instaCode/blob/main/frontend/navigation.gif)
+
+## Funcionalidades Principais
+
+- **Galeria de Projetos**: Exibição dos meus projetos (GitHub/Web) em cards interativos com screenshots.
+- **Detalhes em Modal**: Visualização expandida de cada projeto com descrição, tecnologia e links, navegável sem sair da tela.
+- **Backend com IA**: Integração com a Google Gemini API para gerar descrições automáticas de novos projetos (feature herdada do projeto base).
+- **Design Responsivo**: Interface adaptada para desktop e mobile, com layout fluido e elementos visuais modernos (cards flutuantes, tipografia limpa).
+
+## Tecnologias Utilizadas
+
+- **Frontend**: HTML5 Semântico, CSS3 Moderno (Flexbox/Grid, Variáveis), JavaScript (ES6+ Modules).
+- **Backend**: Node.js, Express.js.
+- **Banco de Dados**: MongoDB (Atlas).
+- **Integrações/Libs**: Google Gemini AI (Geração de texto), Multer (Upload de arquivos), Cors.
 
 ## Como Executar
-Siga as etapas abaixo para rodar o projeto localmente:
+
 1. Clone o repositório:
-    ```
-    git clone https://github.com/vitoriapguimaraes/portfolio-web-Java/tree/master/Node-Instabytes
-    ```
 
-2. Crie um arquivo <code>.env</code> no `backend` e configure as variáveis de ambiente para a conexão com o MongoDB e a chave da API do Gemini:
-    ``` javascript
-    CONNECTION_STRING = "sua_string_de_conexao"
-    GEMINI_API_KEY = "sua_chave_da_api"
-    ```
+   ```bash
+   git clone https://github.com/vitoriapguimaraes/Nodejs-Instabytes.git
+   ```
 
-3. Suba o backend e o frontend separadamente:
-  - Acesse a pasta backend e rode os comandos:
-    ```
-    cd backend
-    npm install
-    npm run dev
-    ```
+2. Configure o Backend:
 
-  - Em outra aba do terminal, acesse a pasta frontend e rode os comandos:
-    ```
-    cd frontend
-    npm install
-    npm run dev
-    ```
+   - Crie um arquivo `.env` na pasta `backend` com suas credenciais:
+     ```env
+     CONNECTION_STRING="sua_string_de_conexao_mongodb"
+     GEMINI_API_KEY="sua_chave_da_api_gemini"
+     ```
+   - Instale as dependências e inicie:
+     ```bash
+     cd backend
+     npm install
+     npm run dev
+     ```
 
-4. Acesse a aplicação pelo navegador no endereço exibido pelo servidor do frontend.
+3. Configure o Frontend:
 
-## Estrutura do Projeto
+   - Em outro terminal:
+     ```bash
+     cd frontend
+     npm install
+     npm run dev
+     ```
+
+4. Acesse a aplicação no navegador (geralmente em http://localhost:1234 ou 8080).
+
+## Estrutura de Diretórios
+
 ```
-/instabytes
-│
-├── backend/                           # Código do backend desenvolvido durante a Imersão Backend da Alura
+/vitoria-code-portfolio
+├── backend/                # API RESTful
 │   ├── src/
-│   │   ├── config/
-│   │   │   └── dbconfig.js            # Configuração da conexão com o MongoDB
-│   │   ├── controllers/
-│   │   │   └── postsControllers.js    # Contém a lógica dos endpoints
-│   │   ├── models/
-│   │   │   └── postsModel.js          # Define a estrutura e funções para interagir com o banco de dados
-│   │   ├── routes/
-│   │   │   └── postsRoutes.js         # Define as rotas da API
-│   │   ├── services/
-│   │   │   └── geminiService.js       # Integração com o serviço Gemini para gerar descrições automáticas
-│   ├── uploads/                       # Diretório onde as imagens enviadas são armazenadas
-│   ├── server.js                      # Configuração do servidor e inicialização da aplicação
-│   │
-│   └── README.md                      # Descrição detalhada das funcionalidades e estrutura do backend
+│   │   ├── config/         # Conexão DB
+│   │   ├── controllers/    # Lógica dos endpoints
+│   │   ├── models/         # Schemas do MongoDB
+│   │   ├── routes/         # Rotas da API
+│   │   └── services/       # Integração com IA
+│   ├── uploads/            # Armazenamento local de imagens
+│   └── seed.js             # Script para popular o banco com projetos
 │
-└── frontend/                          # Código do frontend fornecido pela Alura
-    ├── assets/                        # Diretório com recursos estáticos usados pelo frontend
-    │   ├── images/                    # Imagens do projeto
-    │   │   └── byte.ico               # Ícone do projeto
-    │   ├── js/                        # Scripts JavaScript
-    │   │   ├── fetchApos.js           # Lida com requisições HTTP assíncronas
-    │   │   └── index.js               # Script principal do frontend
-    │   ├── style.css                  # Folha de estilos para o projeto
-    │   ├── photos/                    # Fotos utilizadas no frontend
-    │   │   └── gui.jpeg               # Foto de perfil
-    │   └── index.html                 # Página principal do frontend
-    │
-    └── README.md                      # Descrição detalhada do código original e seus recursos
+└── frontend/               # Interface Web
+    ├── assets/
+    │   ├── images/         # Ícones e assets
+    │   ├── js/             # Lógica (Fetch API, Modal)
+    │   └── style.css       # Estilização Global
+    ├── photos/             # Imagens de perfil/placeholders
+    └── index.html          # Estrutura principal
 ```
 
-## Funcionalidades
+## Status
 
-### Backend
-- Gerenciamento de posts.
-- Upload de imagens com suporte a acessibilidade.
-- Geração automática de descrições para imagens.
+- ✅ Concluído
+- 🛠️ Em manutenção (Adicionando novos projetos continuamente)
 
-### Frontend
-- Interface para visualização e gerenciamento de posts.
-- Experiência de usuário moderna e intuitiva.
+> Veja as [issues abertas](https://github.com/vitoriapguimaraes/Nodejs-Instabytes/issues) para sugestões de melhorias.
 
-<br>
-<hr> 
+## Mais Sobre Mim
 
-### Currículos e Documentos
-Acesse os arquivos disponíveis na pasta 
-[![Documentos](https://img.shields.io/badge/DOCUMENTOS-%F0%9F%93%83-blue?style=flat-square)](https://github.com/vitoriapguimaraes/vitoriapguimaraes/tree/main/DOCUMENTOS) para mais informações sobre minhas qualificações e certificações.
+Acesse os arquivos disponíveis na [Pasta Documentos](https://github.com/vitoriapguimaraes/vitoriapguimaraes/tree/main/DOCUMENTOS) para mais informações sobre minhas qualificações e certificações.

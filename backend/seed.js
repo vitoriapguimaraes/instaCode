@@ -3,34 +3,101 @@ import { MongoClient } from "mongodb";
 
 const seedData = [
   {
-    description: "E-commerce Full Stack com React e Node.js",
-    imgUrl: "https://placehold.co/600x400/222/FFF?text=E-commerce+App",
-    alt: "Interface de E-commerce",
+    description:
+      "BookStack AI - Gerenciamento de biblioteca pessoal com sugestões de IA e analytics.",
+    imgUrl:
+      "https://github.com/vitoriapguimaraes/bookstack-ai/raw/main/frontend/public/demo/navigation.gif",
+    alt: "BookStack AI Demo",
   },
   {
-    description: "API de Gerenciamento de Tarefas (REST)",
-    imgUrl: "https://placehold.co/600x400/379777/FFF?text=Task+API",
-    alt: "Código da API",
+    description:
+      "Utilitários Consolidados - Hub de ferramentas de automação (PDF, Áudio, Imagens) com IA.",
+    imgUrl:
+      "https://github.com/vitoriapguimaraes/productivityHub/raw/main/demo/navigation.gif",
+    alt: "Utilitários Consolidados Demo",
   },
   {
-    description: "Dashboard Financeiro com Python (Pandas)",
-    imgUrl: "https://placehold.co/600x400/45474b/FFF?text=Finance+Dashboard",
-    alt: "Gráficos Financeiros",
+    description:
+      "ArcadeHub - Plataforma unificada de jogos clássicos e interativos modernizados.",
+    imgUrl:
+      "https://github.com/vitoriapguimaraes/arcadeHub/raw/main/public/demo/navigation.gif",
+    alt: "ArcadeHub Demo",
   },
   {
-    description: "Landing Page Responsiva para Startups",
-    imgUrl: "https://placehold.co/600x400/e0e0e0/333?text=Landing+Page",
-    alt: "Design Responsivo",
+    description:
+      "Mathematics Hub - Hub unificado com 3 ferramentas (Média, Conversor, Calculadora).",
+    imgUrl:
+      "https://github.com/vitoriapguimaraes/mathematicsHub/raw/main/demo/navigation.gif",
+    alt: "Mathematics Hub Demo",
   },
   {
-    description: "Clone do Instagram (Backend + Frontend)",
-    imgUrl: "https://placehold.co/600x400/ff3366/FFF?text=Instabytes+Project",
-    alt: "Clone Instagram",
+    description:
+      "Recicla Certo - Aplicação web que simplifica a reciclagem no dia a dia.",
+    imgUrl:
+      "https://github.com/vitoriapguimaraes/reciclaCerto/raw/main/results/display.gif",
+    alt: "Recicla Certo Demo",
   },
   {
-    description: "Bot Discord com Integração API",
-    imgUrl: "https://placehold.co/600x400/7289da/FFF?text=Discord+Bot",
-    alt: "Bot Discord",
+    description:
+      "MediApp - Sistema de gestão médica com prontuários, receitas e agendamento.",
+    imgUrl:
+      "https://github.com/vitoriapguimaraes/medicalRecord/raw/main/docs/ConsultorioMedico-drawio.png",
+    alt: "MediApp Arquitetura",
+  },
+  {
+    description:
+      "Clone do Spotify (React) - Recriação da interface focado em responsividade e UX.",
+    imgUrl:
+      "https://github.com/vitoriapguimaraes/cloneSpotify-react/raw/main/public/demos/screenshot_home.png",
+    alt: "Clone Spotify React",
+  },
+  {
+    description: "Clone do Spotify - Recriação da interface (Home e Busca).",
+    imgUrl:
+      "https://github.com/vitoriapguimaraes/cloneSpotify/raw/main/results/display-PaginaSpotify.gif",
+    alt: "Clone Spotify Demo",
+  },
+  {
+    description: "Instabytes - Gerenciamento de posts com upload e IA.",
+    imgUrl: "https://placehold.co/600x400/ff3366/FFF?text=Instabytes",
+    alt: "Instabytes Project",
+  },
+  {
+    description: "Meu Portfolio - Site interativo com todos os meus projetos.",
+    imgUrl: "https://placehold.co/600x400/222/FFF?text=Portfolio",
+    alt: "Portfolio Project",
+  },
+  {
+    description: "APP SOS Cancer - Projeto voluntário para ONG de Pongaí.",
+    imgUrl: "https://placehold.co/600x400/e91e63/FFF?text=SOS+Cancer",
+    alt: "SOS Cancer App",
+  },
+  {
+    description: "TechTaste - App mobile tipo iFood feito em Flutter.",
+    imgUrl:
+      "https://github.com/vitoriapguimaraes/Flutter-TechTaste/raw/main/software_view.gif",
+    alt: "TechTaste Demo",
+  },
+  {
+    description:
+      "Automação Cadastro Produtos - Preenchimento automático via CSV.",
+    imgUrl: "https://placehold.co/600x400/379777/FFF?text=Automacao+Cadastro",
+    alt: "Automação Python",
+  },
+  {
+    description: "Automação Backup - Backups organizados por data e hora.",
+    imgUrl: "https://placehold.co/600x400/45474b/FFF?text=Automacao+Backup",
+    alt: "Backup Python",
+  },
+  {
+    description: "HashZap - Chat em tempo real com Flask-SocketIO.",
+    imgUrl: "https://placehold.co/600x400/7289da/FFF?text=HashZap",
+    alt: "Chat HashZap",
+  },
+  {
+    description: "Relatórios Email - Envio automático de relatórios HTML.",
+    imgUrl: "https://placehold.co/600x400/e0e0e0/333?text=Relatorio+Email",
+    alt: "Automação Email",
   },
 ];
 
