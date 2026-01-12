@@ -1,4 +1,9 @@
-const API_URL = "http://localhost:3000/posts";
+// Configure sua URL de produção aqui
+const PROD_URL = "https://seu-backend-aqui.onrender.com";
+
+const API_URL = window.location.hostname.includes("localhost")
+  ? "http://localhost:3000/posts"
+  : `${PROD_URL}/posts`;
 
 // Função para buscar os dados do endpoint
 export default async function fetchImages() {
