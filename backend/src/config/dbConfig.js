@@ -11,9 +11,7 @@ export default async function connectToDatabase(stringConnection) {
 
     return mongoClient;
   } catch (erro) {
-    console.error(
-      "Failed to connect to the database! Running in offline mode."
-    );
+    console.error("Failed to connect to the database!", erro);
     return null;
   }
 }
