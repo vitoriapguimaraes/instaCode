@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InstaBytes</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/byte.ico"
+    />
+    <meta
+      name="description"
+      content="Explore o mundo com Viagem Dev! Veja fotos inspiradoras e histórias de viagens incríveis."
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Vitória<strong>.Code</strong></div>
+        <div class="nav-links">
+          <button class="login-btn" aria-label="Entrar">Entrar</button>
+          <a href="#" class="signup-link" aria-label="Cadastre-se"
+            >Cadastre-se</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="profile-container">
+      <section class="profile-header">
+        <img
+          src="photos/perfil_vi.png"
+          alt="Foto de perfil de Vitoria Guimarães"
+          class="profile-pic"
+        />
+        <div class="profile-info">
+          <h1>Vitoria Guimarães</h1>
+          <p class="profile-stats">
+            <span><strong>10+</strong> Projetos</span>
+            <span><strong>Full Stack</strong> Developer</span>
+            <span><strong>2</strong> Anos XP</span>
+          </p>
+          <p class="profile-bio">
+            Transformando ideias em código. 💻<br />
+            JavaScript | React | Node.js | Python
+          </p>
+        </div>
+      </section>
+
+      <section class="image-grid"></section>
+    </main>
+    <div id="modal" class="modal">
+      <div class="modal-card">
+        <span class="close">&times;</span>
+        <button class="nav-btn prev" id="prev-btn">&#10094;</button>
+        <img class="modal-content" id="modal-img" />
+        <button class="nav-btn next" id="next-btn">&#10095;</button>
+        <div id="caption"></div>
+      </div>
+    </div>
+    <script src="assets/js/index.js" type="module"></script>
+  </body>
+</html>

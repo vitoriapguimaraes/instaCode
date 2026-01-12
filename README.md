@@ -14,13 +14,11 @@ Siga as etapas abaixo para rodar o projeto localmente:
     git clone https://github.com/vitoriapguimaraes/portfolio-web-Java/tree/master/Node-Instabytes
     ```
 
-2. Crie um arquivo <code>.env</code> na raiz do projeto e configure as variáveis de ambiente para a conexão com o MongoDB e a chave da API do Gemini:
+2. Crie um arquivo <code>.env</code> no `backend` e configure as variáveis de ambiente para a conexão com o MongoDB e a chave da API do Gemini:
     ``` javascript
     CONNECTION_STRING = "sua_string_de_conexao"
     GEMINI_API_KEY = "sua_chave_da_api"
     ```
-
-   Nota: Certifique-se de manter este arquivo seguro, pois ele contém informações sensíveis.
 
 3. Suba o backend e o frontend separadamente:
   - Acesse a pasta backend e rode os comandos:
@@ -37,7 +35,7 @@ Siga as etapas abaixo para rodar o projeto localmente:
     npm run dev
     ```
 
-3. Acesse a aplicação pelo navegador no endereço exibido pelo servidor do frontend.
+4. Acesse a aplicação pelo navegador no endereço exibido pelo servidor do frontend.
 
 ## Estrutura do Projeto
 ```
