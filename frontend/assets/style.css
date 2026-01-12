@@ -51,11 +51,10 @@ body {
 }
 
 .navbar .logo {
-  font-family: "Charm", cursive;
+  font-family: "Consolas", "Courier New", monospace;
   font-size: 2rem;
   font-weight: bold;
   color: var(--primary-color);
-  font-style: italic;
   font-weight: 400;
   margin-left: 1rem;
 }
@@ -135,10 +134,30 @@ body {
   font-weight: 600;
 }
 
-.profile-info p {
+.profile-stats {
   font-size: 1rem;
   color: var(--primary-color);
   font-weight: 500;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile-stats span {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* or flex-start based on preference */
+}
+
+.profile-stats strong {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.profile-bio {
+  font-size: 1rem;
+  color: var(--primary-color);
+  line-height: 1.5;
 }
 
 /* Grid de Imagens */

@@ -3,34 +3,34 @@ import { MongoClient } from "mongodb";
 
 const seedData = [
   {
-    description: "Gato fofo explorando o jardim",
-    imgUrl: "http://placecats.com/400/400",
-    alt: "Gato no jardim",
+    description: "E-commerce Full Stack com React e Node.js",
+    imgUrl: "https://placehold.co/600x400/222/FFF?text=E-commerce+App",
+    alt: "Interface de E-commerce",
   },
   {
-    description: "Paisagem incrível de montanhas",
-    imgUrl: "http://placecats.com/400/401",
-    alt: "Montanhas",
+    description: "API de Gerenciamento de Tarefas (REST)",
+    imgUrl: "https://placehold.co/600x400/379777/FFF?text=Task+API",
+    alt: "Código da API",
   },
   {
-    description: "Café da manhã reforçado",
-    imgUrl: "http://placecats.com/400/402",
-    alt: "Café da manhã",
+    description: "Dashboard Financeiro com Python (Pandas)",
+    imgUrl: "https://placehold.co/600x400/45474b/FFF?text=Finance+Dashboard",
+    alt: "Gráficos Financeiros",
   },
   {
-    description: "Codando em um café",
-    imgUrl: "http://placecats.com/400/403",
-    alt: "Laptop com código",
+    description: "Landing Page Responsiva para Startups",
+    imgUrl: "https://placehold.co/600x400/e0e0e0/333?text=Landing+Page",
+    alt: "Design Responsivo",
   },
   {
-    description: "Gatinho dormindo",
-    imgUrl: "http://placecats.com/400/404",
-    alt: "Gato dormindo",
+    description: "Clone do Instagram (Backend + Frontend)",
+    imgUrl: "https://placehold.co/600x400/ff3366/FFF?text=Instabytes+Project",
+    alt: "Clone Instagram",
   },
   {
-    description: "Setup gamer neon",
-    imgUrl: "http://placecats.com/400/405",
-    alt: "Setup gamer",
+    description: "Bot Discord com Integração API",
+    imgUrl: "https://placehold.co/600x400/7289da/FFF?text=Discord+Bot",
+    alt: "Bot Discord",
   },
 ];
 
