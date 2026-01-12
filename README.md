@@ -2,9 +2,7 @@
 
 > Meu portfólio profissional interativo, desenvolvido para demonstrar minhas habilidades em desenvolvimento Full Stack. O projeto exibe meus principais trabalhos em uma interface moderna e responsiva, utilizando um backend robusto para gerenciamento de conteúdo e integração com IA.
 
-[Link de acesso ao deploy em breve]
-
-![Demonstração do sistema](https://github.com/vitoriapguimaraes/instaCode/blob/main/frontend/navigation.gif)
+![Demonstração do sistema](https://github.com/vitoriapguimaraes/instaCode/blob/main/demo/navigation.gif)
 
 ## Funcionalidades Principais
 
